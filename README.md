@@ -7,7 +7,7 @@
 
 `sudo docker-compose run web django-admin startproject hoge .`
 
-もともと`django-admin.py`になっていたが、Django 4.0には存在しないようなので、`django-admin`に変えた。
+もともと`django-admin.py`になっていたが、Django 4.0には存在しないようなので`django-admin`に変えた。
 
 sudoは環境によってはなくてもよい。
 
@@ -17,4 +17,4 @@ sudoは環境によってはなくてもよい。
 
 # その他
 
-`sudo docker-compose run web /bin/bash`でwebコンテナのシェルを開ける。`exit`で終了。
+コンテナが停止している場合は`sudo docker-compose run web /bin/bash`、動作中の場合は`sudo docker-compose exec web /bin/bash`でwebコンテナのシェルを開ける。`exit`で終了。
